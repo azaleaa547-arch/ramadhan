@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Menunaikan Puasa 🌙</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fdf6ec, #e3f2e1, #f8d7e8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  background: rgba(255,255,255,0.7);
+  padding: 25px;
+  border-radius: 20px;
+  width: 85%;
+  max-width: 350px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 20px;
+}
+
+p {
+  margin: 15px 0;
+}
+
+img {
+  border-radius: 15px;
+  width: 180px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ffcad4;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #b5ead7;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🌙 Selamat Menunaikan Ibadah Puasa ✨</h1>
+
+  <img id="image"
+  src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+
+  <p id="text">Klik tombolnya yaa 🤍</p>
+
+  <button onclick="nextSlide()">Klik di sini ✨</button>
+</div>
+
+<script>
+let slides = [
+  {
+    text: "Semoga puasanya lancar dan penuh berkah 🌙",
+    img: "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
+  },
+  {
+    text: "Semoga kuat nahan lapar & haus 😌",
+    img: "https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif"
+  },
+  {
+    text: "Semoga ibadahnya makin rajin 🤍",
+    img: "https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif"
+  },
+  {
+    text: "Dan semoga selalu bahagia ✨",
+    img: "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif"
+  }
+];
+
+let index = 0;
+
+function nextSlide() {
+  document.getElementById("text").innerText = slides[index].text;
+  document.getElementById("image").src = slides[index].img;
+
+  index++;
+  if (index >= slides.length) {
+    index = 0;
+  }
+}
+</script>
+
+</body>
+</html>
